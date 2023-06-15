@@ -1,64 +1,74 @@
-<div class="flex flex-row min-h-screen">
-  <div class="bg-purple-800 w-1/2"></div>
-  <form
-    [formGroup]="signupForm"
-    (ngSubmit)="submitForm()"
-    class="flex flex-col justify-center items-center bg-gray-100 py-5 w-1/2"
-  >
-    <h1 class="text-4xl mb-5 font-bold text-purple-950">Welcome!</h1>
-    <div class="flex flex-col justify-center items-center p-2">
-      <div class="mb-4">
-        <input
-          type="text"
-          id="firstname"
-          formControlName="firstname"
-          placeholder="First Name"
-          class="px-4 py-2 border rounded"
-        />
-      </div>
-
-      <div class="mb-4">
-        <input
-          type="text"
-          id="lastname"
-          formControlName="lastname"
-          placeholder="Last Name"
-          class="px-4 py-2 border rounded"
-        />
-      </div>
-      <div class="mb-4">
-        <input
-          type="text"
-          id="email"
-          formControlName="email"
-          placeholder="Email"
-          class="px-4 py-2 border rounded"
-        />
-      </div>
-      <div class="mb-4">
-        <input
-          type="text"
-          id="password"
-          formControlName="password"
-          placeholder="Password"
-          class="px-4 py-2 border rounded"
-        />
-      </div>
-      <div class="mb-4">
-        <input
-          type="text"
-          id="confirmpassword"
-          formControlName="confirmpassword"
-          placeholder="Confirm Password"
-          class="px-4 py-2 border rounded"
-        />
-      </div>
-
-      <app-form-button type="submit"> Sign Up </app-form-button>
-      <p>
-        Already have an account?
-        <a routerLink="/signin" class="text-purple-800">Log In</a>
-      </p>
+<div class="min-h-screen flex flex-col">
+  <app-navbar></app-navbar>
+  <div class="flex flex-row flex-1 items-center">
+    <div class="w-1/2">
+      <img
+        src="../../../assets/AuthIllus.jpg"
+        alt="Background Image"
+        class="object-cover my-5"
+      />
     </div>
-  </form>
+
+    <form
+      [formGroup]="signupForm"
+      (ngSubmit)="submitForm()"
+      class="h-full flex flex-col justify-center items-center bg-white w-3/4"
+    >
+      <h1 class="text-4xl mb-5 font-bold text-purple-900">Welcome!</h1>
+      <div class="flex flex-col justify-center items-center p-2 w-1/2">
+        <div class="mb-4 w-full items-center">
+          <input
+            type="text"
+            id="firstname"
+            formControlName="firstname"
+            placeholder="First Name"
+            class="px-4 py-2 w-full border rounded"
+          />
+        </div>
+
+        <div class="mb-4 w-full items-center">
+          <input
+            type="text"
+            id="lastname"
+            formControlName="lastname"
+            placeholder="Last Name"
+            class="px-4 py-2 w-full border rounded"
+          />
+        </div>
+        <div class="mb-4 w-full items-center">
+          <input
+            type="text"
+            id="email"
+            formControlName="email"
+            placeholder="Email"
+            class="px-4 py-2 w-full border rounded"
+          />
+        </div>
+        <div class="mb-4 w-full items-center">
+          <input
+            type="text"
+            id="password"
+            formControlName="password"
+            placeholder="Password"
+            class="px-4 py-2 w-full border rounded"
+          />
+        </div>
+        <div class="mb-4 w-full items-center">
+          <input
+            type="text"
+            id="confirmpassword"
+            formControlName="confirmpassword"
+            placeholder="Confirm Password"
+            class="px-4 py-2 w-full border rounded"
+          />
+        </div>
+
+        <app-form-button type="submit"> Sign Up </app-form-button>
+        <p class="">
+          Already have an account?
+          <a routerLink="/signin" class="text-purple-800">Sign In</a>
+        </p>
+      </div>
+    </form>
+  </div>
 </div>
