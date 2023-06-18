@@ -1,20 +1,18 @@
-<nav
-  class="py-4 relative z-50 top-0 w-full bg-cover"
-  [ngStyle]="{ 'background-image': 'url(../../../assets/AuthScreen.jpg)' }"
->
+<nav class="py-4 relative z-50 top-0 w-full">
   <div class="container mx-auto flex justify-between items-center px-5">
-    <a routerLink="/" class="text-lg font-bold text-white">TaskSync</a>
+    <a routerLink="/" class="text-lg font-bold text-white">TaskSynk</a>
     <ul class="flex space-x-4">
       <li>
-        <a routerLink="/home" class="text-white hover:text-gray-600">Home</a>
+        <a routerLink="/home" class="text-white hover:underline">Home</a>
       </li>
       <li>
-        <a routerLink="/about" class="text-white hover:text-gray-600">About</a>
+        <a routerLink="/about" class="text-white hover:underline">About</a>
       </li>
       <li>
-        <a routerLink="/contact" class="text-white hover:text-gray-600"
-          >Contact</a
-        >
+        <a routerLink="/contact" class="text-white hover:underline">Contact</a>
+      </li>
+      <li>
+        <a routerLink="/signin" class="text-white hover:underline">Sign In</a>
       </li>
     </ul>
   </div>
